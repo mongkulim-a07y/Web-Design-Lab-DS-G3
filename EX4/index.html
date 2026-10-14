@@ -1,1 +1,72 @@
-<!-- Write your code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td,th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th{
+        background-color: #dddddd;
+        }
+
+        #thumbnail {
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height:250px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to CADT Product Catalog</h2>
+
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>In Stock</th>
+            <th>Thumbnail</th>
+        </tr>
+
+        <tr>
+            <td>C# Book</td>
+            <td>$10</td>
+            <td>5</td>
+            <td>YES</td>
+            <td id="thumbnail"">
+                <img src="https://www.oreilly.com/covers/urn:orm:book:9781098117801/296w/?format=webp" alt="C# Book">
+            </td>
+        </tr>
+        <tr>
+            <td>Polo-Shirt NGEP</td>
+            <td>$12</td>
+            <td>60</td>
+            <td>YES</td>
+            <td id="thumbnail"">
+                <img src="https://ngep.idt.edu.kh/assets/polo%20front-Bl6NzJA_.png" alt="Polo-Shirt">
+            </td>
+        </tr>
+        <tr>
+            <td>T-Shirt NGEP</td>
+            <td>$8</td>
+            <td>50</td>
+            <td>YES</td>
+            <td id="thumbnail"">
+                <img src="https://ngep.idt.edu.kh/assets/T-shirt%20front-DOWx0tg7.png" alt="T-Shirt">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
