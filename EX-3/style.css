@@ -1,1 +1,22 @@
 /* TODO */
+
+body {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    width: 500px;
+    height: 200px;
+    border: 10px solid rgb(2, 5, 22);
+    border-radius: 9em;
+    background-color: blue;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+button:hover {
+    border: 10px solid rgb(76, 85, 129);
+    background-color: rgb(103, 176, 236);
+}
