@@ -36,16 +36,18 @@ button {
     color: white;
 
 }
-#red {
+.red {
     background-color: red;
 }
 
-#green {
+.green {
     background-color: green;
 }
-#blue {
+.blue {
     background-color: blue;
 }
 button:hover {
     cursor: pointer;
+    background-color: #796e6edd;
+    color: black;
 }
