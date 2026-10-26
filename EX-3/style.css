@@ -1,8 +1,7 @@
 /* TODO */
 
 body {
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
 }
 button {
     width: 500px;
