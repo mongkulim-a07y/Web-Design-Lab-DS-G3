@@ -91,3 +91,33 @@ body {
     font-size: 18px;
     color: #ffff;
 }
+
+.profile-card .sub-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn {
+    border: none;
+    border-radius: 24px;
+    padding: 0 10px;
+    margin-top: 20px;
+
+    width: 200px;
+    height: 35px;
+    background-color: rgb(98, 98, 223);
+    font-size: 1;
+    font-weight: 600;
+    color: #ffff;
+    text-transform: uppercase;
+    transition: .4s;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(70, 70, 200);
+    transform: scale(1.02);
+}
