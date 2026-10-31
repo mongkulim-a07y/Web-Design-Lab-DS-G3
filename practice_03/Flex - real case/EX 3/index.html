@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+      
+    />
+    <link rel="stylesheet" href="stlye.css">
+    <style>
+      body {
+        background-color: #D6E7F3;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: row;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .pricing-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .pricing-plan {
+        width: 100%;
+        max-width: none;
+        }
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">
+          Basic
+          <div class="start-at">Starting at</div>
+        </div>
+        
+        <div class="plan-price">$9.99 
+          <span class="periode">/month</span>
+          <div class="sub-plan">Monthly Subscription</div> 
+        </div>
+        <ul class="plan-features">
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>
+            10GB Storage
+          </li>
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>
+            1 User
+          </li>
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/delete-sign.png" alt="delete-sign"/>
+            </span>
+            Support
+          </li>
+        </ul>
+        <button class="plan-button">Subscribe</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard 
+          <div class="start-at">Starting at</div>
+        </div>
+        <div class="plan-price">$19.99 
+          <span class="periode">/month</span>
+          <div class="sub-plan">Monthly Subscription</div> 
+        </div>
+        <ul class="plan-features">
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>
+            50GB Storage
+          </li>
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>
+            5 Users
+          </li>
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>
+            Phone &amp; Email Support
+          </li>
+        </ul>
+        <button class="plan-button">Subscribe</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium
+          <div class="start-at">Starting at</div>
+        </div>
+        <div class="plan-price">$49.99
+          <span class="periode">/month</span>
+          <div class="sub-plan">Monthly Subscription</div>  
+        </div>
+        <ul class="plan-features">
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>
+            100GB Storage
+          </li>
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>10 Users
+          </li>
+          <li>
+            <span>
+              <img width="15" height="15" src="https://img.icons8.com/windows/32/checkmark--v1.png" alt="checkmark--v1"/>
+            </span>
+            24/7 Support
+          </li>
+        </ul>
+        <button class="plan-button">Subscribe</button>
+      </div>
+    </div>
+  </body>
+</html>
