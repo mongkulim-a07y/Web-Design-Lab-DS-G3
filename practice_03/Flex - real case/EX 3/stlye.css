@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+     font-family: "Archivo", sans-serif;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin:2em ;
+    padding: 0 1em;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.pricing-plan{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    padding: 2em;
+    background-color: #fff;
+    min-height: 400px;         
+    flex: 1 0 300px;           
+    max-width: 360px; 
+    justify-content: space-between;
+    gap: 1em;
+    box-shadow: 0 4px 6px 5px rgba(0, 0, 0, 0.1);
+}
+
+.plan-price{
+    font-size: 40px;
+    font-weight: 600;
+    color: #162B60;
+}
+.plan-price::first-letter {
+    font-size: 45px;
+}
+.periode {
+    font-weight:500;
+    font-size: small;
+}
+
+.plan-button {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #162B60;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+
+}
+.plan-button:hover{
+    cursor: pointer;
+    background-color: #2a3b66;
+}
+
+.plan-title {
+    font-weight: 600;
+    font-size: 35px;
+    color: #162B60;
+    
+}
+.start-at {
+    margin-left: 2px;
+    margin-top: 1px;
+    font-weight: normal;
+    font-size: 17px;
+    color: #8690AB;
+}
+
+.sub-plan {
+    font-weight: 400;
+    font-size: 17px;
+    color: #162B60;
+}
+
+.plan-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+li {
+    display: flex;
+    font-weight: 500;
+    gap: .75em;
+    align-items: center;
+}
+
+.amp {
+    font-family: Arial, Helvetica, sans-serif;
+}
