@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 2em;
+    background-color: #FFFFFF;
+
+    opacity: 1;
+    overflow: hidden; 
+    transition: opacity 0.3s ease, padding 0.3s ease;
+}
+.logo-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bx-dock-left-alt {
+    padding: 6px;
+    border-radius: 50%;
+}
+.bx-dock-left-alt:hover
+{
+    background-color: #dbd8d8;
+    transition: .3s;
+}
+
+.toggle-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #64748b;
+}
+
+/* .toggle-btn:hover {
+} */
+
+#sidebar-toggle:checked ~ .dashboard-container {
+  grid-template-columns: 0px 1fr;
+  transition: grid-template-columns 0.3s ease;
+}
+#sidebar-toggle:checked ~ .dashboard-container .sidebar {
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Hide the open button while the sidebar is already open */
+.open-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #64748b;
+}
+
+#sidebar-toggle:checked ~ .dashboard-container .open-btn {
+  display: block;
+}
+
+
+.logo {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 26px;
+}
+.verstion {
+    font-size: 15px;
+    font-weight: 400;
+    color: #838383;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-top: 1em;
+}
+
+.nav-link {
+    height: 55px;
+    width: 320px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1em;
+    align-items: center;
+    gap: .5em;
+    color: #838383;
+    text-decoration: none;
+}
+.nav-link:hover {
+    background-color: #ccc;
+    transition: transform 0.1s ease, background-color .1s ease-in-out;
+}
+.active {
+    background-color: #3291ea;
+    color: #FFFFFF;
+}
+
+
+.sidebar-bottom
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.pro-card{
+    width: 300px;
+    height: 120px;
+    padding: 1em;
+    border-radius: 20px;
+    background-color: #3291ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.btn-pro{
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+.btn-pro:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color .1s ease-in-out;
+}
+.profile-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-profile{
+    display: flex;
+    gap: 1em;
+} 
+.user-info{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.avatar img
+{
+width: 60px;
+height: 60px;
+left: 28px;
+top: 1080px;
+
+}
+.profile-menu:hover {
+    cursor: pointer;
+}
+.bx{
+    font-size: 24px;
+}
+
+.main-content {
+    background-color: #f4f7fd;
+    padding: 2em 5em 5em 5em;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+
+}
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    gap: 10px;
+    background-color: #FFFFFF;
+}
+
+.search-box:focus-within {
+      border-color: #007bff;
+    }
+
+.search-box i {
+      color: #888;
+    }
+
+.search-box input{
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 16px;
+    }
+
+.stats-grid {
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 30px;
+    padding: 2em;
+    background-color: #FFFFFF;
+    margin-top: 3em;
+    margin-bottom: 2em;
+
+}
+ .stat-icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 84px;
+    background-color: rgba(144, 238, 144, 0.444);    
+    border-radius: 50%;
+} 
+
+.stat-icon i {
+    font-size: 42px;
+    color: #00AC4F;
+}
+
+.stat-card {
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 2px solid #e5e7eb;
+}
+
+
+.stat-card:last-child{
+    border: none;
+}
+.stat-details{
+    display: flex;
+    flex-direction: column;
+}
+.stat-label {
+    color: #ACACAC;
+    font-size: 16px;
+}
+.stat-number {
+    font-size: 32px;
+    font-weight: 600;
+}
+.stat-trend {
+    display: flex;
+}
+.up {
+    font-weight: 600;
+    color: green;
+    display: flex;
+}
+
+.down {
+    font-weight: 600;
+    color: red;
+    display: flex;
+}
+
+.trend-lable {
+    font-weight: 300;
+    color: black;
+}
+
+.customers-card {
+    padding: 2em;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+}
+
+.table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subtitle{
+    font-weight: 400;
+    color: #16C098;
+}
+.table-controls {
+    display: flex;
+    gap: 1em;
+}
+.table-controls .search-box {
+    background-color: #f4f7fd;
+}
+.search-box input[type=text-control] {
+    background-color: #f4f7fd;
+}
+
+.select-wrapper{
+    display: flex;
+  align-items: center;
+  background-color: #f4f7fd;
+  border-radius: 25px;
+  padding: 8px 15px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.sort-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: none;
+    background-color: #f4f7fd;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+th{
+    font-weight: 500;
+    /* color: #B5B7C0; */
+}
+
+
+/* THE WRAPPER: Handles responsiveness & horizontal scrolling */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Enables smooth side-scrolling on small screens */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile/iOS */
+}
+
+/* The Table Itself */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap; /* Prevents text from awkwardly wrapping on narrow columns */
+}
+
+/* Table Head & Cells */
+th {
+  color: #b5b7c0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+td {
+  color: #292d32;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 16px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Row Hover Effect */
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Status Badges */
+.badge {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  /* display: inline-block; */
+  /* text-align: center; */
+}
+
+.badge.active {
+  background: #e4f8f0;
+  color: #00b087;
+  border: 1px solid #16c79a33;
+}
+
+.badge.inactive {
+  background: #ffeded;
+  color: #df0404;
+  border: 1px solid #df040433;
+}
+
+
+.table-footer{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.entries-info{
+    color: #b5b7c0;
+    font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination button {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #eeeeee;
+  background-color: #f5f5f5;
+  color: #404b52;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  /* Centers the number/arrow inside the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect for inactive buttons */
+.pagination button:hover:not(.active) {
+  background-color: #e2e8f0;
+}
+
+/* Active page button (Purple highlight) */
+.pagination button.active {
+  background-color: #332ad6;
+  color: #ffffff;
+  border: none;
+}
+
+/* Styling for the "..." dots */
+.pagination span {
+  color: #404b52;
+  font-size: 0.85rem;
+  padding: 0 4px;
+}

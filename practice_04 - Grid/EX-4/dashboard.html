@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Basic Icons -->
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+  <!-- Filled Icons -->
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+  <!-- Brand Icons -->
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" hidden>
+  <!-- Main Grid Container (Sidebar + Main Content) -->
+  <div class="dashboard-container">
+
+    <!-- 1. LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="logo-top">
+            <div class="logo">
+              <span><img width="40px" style="border-radius: 12px;" src="letter-z.png" alt=""></span>
+              <h2>Zenex
+                <span class="verstion">v.01</span>
+              </h2>
+            </div>
+            <label for="sidebar-toggle" class="toggle-btn">
+              <i class="bx bx-dock-left-alt" ></i>
+            </label>
+        </div>
+        
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-link">
+            <i class='bx bxs-dashboard'></i>
+            Dashboard
+          </a>
+          <a href="#" class="nav-link">
+            <i class='bx bx-package'></i>
+            Product
+            </a>
+          <a href="#" class="nav-link active">
+            <i class='bx bxs-user'></i>
+            Customers
+            </a>
+          <a href="#" class="nav-link">
+            <i class='bx bx-wallet-alt' ></i>
+            Income
+            </a>
+          <a href="#" class="nav-link">
+            <i class='bx bxs-discount'></i>
+            Promote
+            </a>
+          <a href="#" class="nav-link">
+            <i class='bx bx-help-circle' ></i>
+            Help
+            </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="pro-card">
+          <p>Upgrade to <span style="font-weight: 600;">PRO</span> to get access all Features!</p>
+          <button class="btn-pro">Get Pro Now!</button>
+        </div>
+        <div class="profile-container">
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="image.png" alt="">
+                </div>
+                <div class="user-info">
+                    <strong>Evano</strong>
+                    <span style="color: #757575;">Project Manager</span>
+                </div>
+            </div>
+            <div class="profile-menu">
+                <i class='bx bx-dots-vertical-rounded' ></i>
+            </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- Top Header (Flexbox: Greeting left, Search right) -->
+      <header class="top-header">
+        <div class="header-left">
+          <label for="sidebar-toggle" class="open-btn">
+            <i class="bx bx-dock-left-alt"></i> 
+          </label>
+          <h1>Hello, Evano </h1>
+        </div>
+      
+        <div class="search-box">
+            <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search" >
+        </div>
+      </header>
+
+      <!-- Stat Cards (Grid: 3 columns) -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="bx bx-group"></i>
+          </div>
+          <div class="stat-details">
+            <span class="stat-label">Total Customers</span>
+            <strong class="stat-number">5,423</strong>
+            <span class="stat-trend">
+                <span class="up">
+                    <i class="bx bx-arrow-up-stroke" ></i>16%&nbsp 
+                    <span class="trend-lable">this month</span>
+                </span>
+            </span>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="bx bx-user-check" ></i>
+          </div>
+          <div class="stat-details">
+            <span class="stat-label">Members</span>
+            <strong class="stat-number">1,893</strong>
+            <span class="stat-trend">
+                <span class="down">
+                    <i class="bx bx-arrow-down-stroke" ></i>1%&nbsp 
+                    <span class="trend-lable">this month</span>
+                </span>
+            </span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="bx bx-monitor-wide" ></i>
+          </div>
+          <div class="stat-details">
+            <span class="stat-label">Active Now</span>
+            <strong class="stat-number">189</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customers Table Section -->
+      <section class="customers-card">
+        <div class="table-header">
+          <div>
+            <h2>All Customers</h2>
+            <span class="subtitle">Active Members</span>
+          </div>
+
+          <div class="table-controls">
+            <div class="search-box">
+              <i class='bx bx-search'></i>
+              <input type="text-control" placeholder="Table-search" >
+            </div>
+            <div class="select-wrapper">
+              <select class="sort-select">
+                <option value="" disabled selected>Sort by</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+              </select>
+              <i class="bx bx-chevron-down" ></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wrap table in a div for horizontal scrolling on mobile -->
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>Company</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jane Cooper</td>
+                <td>Microsoft</td>
+                <td>(225) 555-0118</td>
+                <td>jane@microsoft.com</td>
+                <td>United States</td>
+                <td><span class="badge active">Active</span></td>
+              </tr>
+              <tr>
+                <td>Floyd Miles</td>
+                <td>Yahoo</td>
+                <td>(205) 555-0100</td>
+                <td>floyd@yahoo.com</td>
+                <td>Kiribati</td>
+                <td><span class="badge inactive">Inactive</span></td>
+              </tr>
+              <tr>
+                <td>Ronald Richards</td>
+                <td>Adobe</td>
+                <td>(302) 555-0107</td>
+                <td>ronald@adobe.com</td>
+                <td>Israel</td>
+                <td><span class="badge inactive">Inactive</span></td>
+              </tr>
+              <tr>
+                <td>Marvin McKinney</td>
+                <td>Tesla</td>
+                <td>(252) 555-0126</td>
+                <td>marvin@tesla.com</td>
+                <td>Iran</td>
+                <td><span class="badge active">Active</span></td>
+              </tr>
+              <tr>
+                <td>Jerome Bell</td>
+                <td>Google</td>
+                <td>(629) 555-0129</td>
+                <td>jerome@google.com</td>
+                <td>Réunion</td>
+                <td><span class="badge active">Active</span></td>
+              </tr>
+              <tr>
+                <td>Kathryn Murphy</td>
+                <td>Microsoft</td>
+                <td>(406) 555-0120</td>
+                <td>kathryn@microsoft.com</td>
+                <td>Curaçao</td>
+                <td><span class="badge active">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination Footer (Flexbox) -->
+        <div class="table-footer">
+          <span class="entries-info">Showing data 1 to 8 of 256K entries</span>
+          <div class="pagination">
+            <button>&lt;</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <span>...</span>
+            <button>40</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
