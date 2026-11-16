@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            flex-wrap: wrap; 
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            color: #fff;
+            padding:1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav-link ul{
+            display: flex;
+            list-style-type: none;
+            gap: 2em;
+        }
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .menu-btn{
+            display: none;
+            font-size: 24px;
+        }
+        #menu-toggle {
+            display: none;
+        }
+
+
+        @media (max-width:768px) {
+
+            .header {
+                order: 1;
+            }
+            .nav-link{
+                display: none;
+                order: 3;
+                width: 100%;
+                padding-top: 1em;
+                
+            }
+            .menu-btn{
+                display: block;
+                cursor: pointer;
+                order: 2;
+            }
+            #menu-toggle:checked ~ .nav-link {
+            display: block;
+            
+            }
+            .nav-link ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            }
+
+            li:hover{
+                background-color: #ccc;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Zenex</h1>
+
+        <input type="checkbox" id="menu-toggle">
+        <div class="nav-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+        <label for="menu-toggle" class="menu-btn">
+            <i class="bx bx-list" ></i>
+        </label>
+    </div>
+</body>
+</html>
