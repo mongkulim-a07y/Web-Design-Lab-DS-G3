@@ -7,6 +7,10 @@ function challenge2(array) {
 }
 
 
-let arr = [1,2,3,4,5,6];
-let result = challenge2(arr);
-console.log(result);
+let test1= [14,15,16,20];
+let test2= [5,4,3,2,1];
+let test3= [];
+
+console.log(challenge2(test1));
+console.log(challenge2(test2));
+console.log(challenge2(test3));

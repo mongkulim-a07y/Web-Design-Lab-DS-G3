@@ -12,5 +12,9 @@ function challenge1(width, height) {
 }
 
 
-let a = challenge1(3,4);
-console.log(a);
+let test1 = challenge1(3,4);
+let test2 = challenge1(5,2);
+let test3 = challenge1(5,-2);
+console.log(test1);
+console.log(test2);
+console.log(test3);
